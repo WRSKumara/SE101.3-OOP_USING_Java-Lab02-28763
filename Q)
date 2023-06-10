@@ -1,0 +1,61 @@
+package com.mycompany.itemob;
+
+
+public class Item 
+   {
+    private int location;
+    private String description;
+    public Item(int location,String description )
+    {
+        this.location=location;
+        this.description=description;
+    }
+    public void setLocation(int lc)
+    {
+        location=lc;
+    }
+    public void setDescription(String de)
+    {
+        description=de;
+    }
+    public int getLocation()
+    {
+        return location;
+    }
+    public String getDescription()
+    {
+        return description;
+    }
+    }
+
+
+package com.mycompany.itemob;
+
+
+public class Monster extends Item
+     {
+    public Monster(int location,String description )
+    {
+        super(location,description);
+    }
+    
+     }
+
+
+
+package com.mycompany.itemob;
+
+
+public class Itemob 
+    {
+
+    public static void main(String[] args) 
+    {
+        Monster m1=new Monster(1234,"sampath");
+        m1.setLocation(100);
+        m1.setDescription("NSBM");
+        
+        System.out.println("Location is:"+m1.getLocation());
+        System.out.println("Description is:"+m1.getDescription());
+    }
+    }
